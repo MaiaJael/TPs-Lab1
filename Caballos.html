@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label> El caballo de </label>
+<select id="horse1">
+  <option value="jack"> Jack </option>
+  <option value="mack"> Mack </option>
+  <option value="smith"> Smith </option>
+  <option value="willy"> Willy </option>
+</select>
+
+<label> es más </label>
+
+<select id="attribute">
+  <option value="light +"> claro </option>
+  <option value="slow +"> lento </option>
+  <option value="old +"> viejo </option>
+</select>
+
+<label> que el de </label>
+
+<select>
+  <option> Jack </option>
+  <option> Mack </option>
+  <option> Smith </option>
+  <option> Willy </option>
+</select>
+
+<button onclick="SaveData()"> Guardar </button><br>
+<button onclick="Process()"> Calcular </button>
+<button onclick="Reset()"> Resetar </button><br>
+
+<label> Caballo más claro: </label>
+<label id="lightestHorse"></label><br>
+
+<label> Caballo más lento: </label>
+<label id="slowestHorse"></label><br>
+
+<label> Caballo más viejo: </label>
+<label id="oldestHorse"></label><br>
+
+
+<script src="./Caballos.js"></script>
+</body>
+</html>

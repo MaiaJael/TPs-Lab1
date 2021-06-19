@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Promedios de participantes</title>
+</head>
+
+<script src = "./PromediosParticipantes.js"></script>
+
+<form>
+    <label for = "height"> Altura en cm: </label><br>
+    <input type = "number"  id = "height" value = "0"><br>
+    <label for = "age"> Edad: </label><br>
+    <input type = "number"  id = "age" value = "0"><br>
+    <label> Género: </label><br>
+    <select id = "gender">
+        <option value = "null"> ---Seleccionar opción--- </option>
+        <option value = "female"> Mujer </option>
+        <option value = "male"> Hombre </option>
+    </select><br>
+    <input type = "reset">
+</form>
+<button onclick = "SaveData()"> Cargar </button>
+<button onclick = "CalculateAndUpdate()"> Calcular </button><br>
+<label id = "notice"></label><br>
+
+<label> Edad promedio: </label>
+<label id = "ageData"></label><br>
+<label> Altura promedio de las mujeres: </label>
+<label id = "femaleHeightData"></label><br>
+<label> Altura promedio de los hombres: </label>
+<label id = "maleHeightData"></label><br>
+</html>
