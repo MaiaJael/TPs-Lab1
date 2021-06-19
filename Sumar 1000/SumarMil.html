@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Sumar mil</title>
 </head>
+
 <body>
-$END$
+
+<script>
+  var totalNumber = 0;
+  var numberList = [];
+  var numbersBetween10and0 = {
+      numbers: [],
+      sum: 0
+  }
+  var multipleOfSix = [];
+
+
+  function Process() {
+      while (totalNumber < 1000) {
+          var inputNumber =
+              parseInt(prompt("Ingrese numeros aleatorios hasta llegar a 1000\n" +
+                  totalNumber + " / 1000"));
+          numberList.push(inputNumber);
+          totalNumber += inputNumber;
+      }
+
+      Extras();
+      Results();
+  }
+
+  function Extras() {
+      for (var i = 0; i < numberList.length; i++) {
+          if (numberList[i] <= 10 && numberList[i] > 0) {
+              numbersBetween10and0.numbers.push(numberList[i]);
+              numbersBetween10and0.sum += numberList[i];
+          }
+          if ((numberList[i] % 6) === 0) {
+              multipleOfSix.push(numberList[i]);
+          }
+      }
+  }
+
+  function Results() {
+        if (totalNumber > 1000) {
+            var excess = totalNumber - 1000;
+
+            alert("Te pasaste.\nSobró: " + excess + "\nVuelve a intentar.");
+
+            totalNumber = 0
+            numberList = []
+
+            Process();
+        }
+        else {
+            alert("¡Ganaste!" + "\nUsaste " + numbersBetween10and0.numbers.length + " números entre 0 y 10" +
+                "\n - Esos son: " + numbersBetween10and0.numbers + "\n - Sumados dan: " + numbersBetween10and0.sum
+                + "\nY usaste " + multipleOfSix.length + " multiplos de 6" + "\n - Esos son: " + multipleOfSix);
+        }
+  }
+
+  Process();
+
+</script>
+
 </body>
+
 </html>

@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Cuenta plata</title>
 </head>
 <body>
-$END$
+
+<h1>Ingrese la cantidad de monedas correspondiente: </h1>
+
+<form>
+    <input type="number" id="oneEuro" value="0" min="0">
+    <label for="oneEuro"> 1€ </label><br>
+    <input type="number" id="twoEuros" value="0" min="0">
+    <label for="twoEuros"> 2€ </label><br>
+    <input type="number" id="fiftyCents" value="0" min="0">
+    <label for="fiftyCents"> 0.50€ </label><br>
+    <input type="number" id="twentyCents" value="0" min="0">
+    <label for="twentyCents"> 0.20€ </label><br>
+    <input type="number" id="tenCents" value="0" min="0">
+    <label for="tenCents"> 0.10€ </label><br>
+</form>
+
+<button onclick="ConvertToDollars()"> Convertir </button><br>
+
+<label> Plata en dólares: </label>
+<label id="usdMoney"></label>
+
+<script src="./ContarPlata.js"></script>
 </body>
 </html>

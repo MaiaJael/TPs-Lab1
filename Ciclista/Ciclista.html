@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tiempo ciclista</title>
 </head>
 <body>
-$END$
+
+<h2> Hora de salida: </h2>
+<label for="departureHour">Hora:</label>
+<input type="number" id="departureHour" min="0" max="24">
+<label for="departureMinute">Minutos:</label>
+<input type="number" id="departureMinute" min="0" max="59">
+<label for="departureSecond">Segundos:</label>
+<input type="number" id="departureSecond" min="0" max="59">
+
+<h2> Duración del viaje: </h2>
+<label for="tripSeconds">Segundos que tarda:</label>
+<input type="number" id="tripSeconds" min="0">
+
+<h2> Hora de llegada: </h2>
+<button onclick="Process()">Calcular</button>
+<label id="timeOfArrival"> __ : __ : __</label>
+
+<script src="./Ciclista.js"></script>
 </body>
 </html>

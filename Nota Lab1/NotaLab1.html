@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Laboratorio I</title>
 </head>
+
 <body>
-$END$
+
+<h1>LABORATORIO 1</h1>
+<h3>Promedio de notas</h3>
+<form>
+  <input id="firstMidTerm" type="number" min="0" max="10">
+  <label for="firstMidTerm"> Primer parcial</label><br>
+  <input id="secondMidTerm" type="number" min="0" max="10">
+  <label for="secondMidTerm"> Segundo parcial</label><br>
+  <input id="thirdMidTerm" type="number" min="0" max="10">
+  <label for="thirdMidTerm"> Tercer parcial</label><br>
+  <input id="finalExam" type="number" min="0" max="10">
+  <label for="finalExam"> Examen final</label><br>
+  <input id="finalWork" type="number" min="0" max="10">
+  <label for="finalWork"> Trabajo final</label><br>
+  <input type="reset">
+</form>
+
+<button onclick="Calculate()"> Promediar </button><br>
+
+<h4>Nota final: </h4>
+<label id="finalMark"></label>
+
+<script src="NotaLab1.js"></script>
+
 </body>
+
 </html>

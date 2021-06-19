@@ -4,7 +4,7 @@ function SortNumbers() {
     var numberArray = document.getElementById("numbers").value.split(" ")
 
     //Esto es solo para poder ingresar los números
-    for (var i = 0; i < numberArray.llength; i++)
+    for (var i = 0; i < numberArray.length; i++)
         numberArray[i] = parseInt(numberArray)
 
     numberArray = numberArray.sort(function(a, b){return a-b});
